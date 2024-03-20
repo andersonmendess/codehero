@@ -38,7 +38,6 @@ dependencies:
   provider: ^6.1.2
   uuid: ^4.3.3
   crypto: ^3.0.3
-  palette_generator: ^0.3.3+3
 
 dev_dependencies:
   flutter_test:

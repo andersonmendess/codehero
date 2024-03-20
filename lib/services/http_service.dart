@@ -1,10 +1,8 @@
 import 'dart:convert';
 
+import 'package:code_hero/constants.dart';
 import 'package:crypto/crypto.dart';
 import 'package:dio/dio.dart';
-
-const kPublicKey = 'f0ec355819e52ece38cbdf954b91b43d';
-const kPrivateKey = '3985d046979fb526b98150f57133b7710c5b6fd9';
 
 class HttpService {
   static Dio build() {
@@ -16,7 +14,7 @@ class HttpService {
         receiveDataWhenStatusError: true,
         responseType: ResponseType.json,
         contentType: 'application/json',
-        baseUrl: 'https://gateway.marvel.com/v1/public',
+        baseUrl: kMarvelApiBaseUrl,
         headers: {
           'Referer': 'localhost',
         },
@@ -27,11 +25,11 @@ class HttpService {
       InterceptorsWrapper(
         onRequest: (options, handler) {
           final ts = DateTime.now().millisecondsSinceEpoch;
-          final hash = '$ts$kPrivateKey$kPublicKey';
+          final hash = '$ts$kMarvelApiPrivateToken$kMarvelApiPublicToken';
 
           options.queryParameters.addAll({
             'ts': ts,
-            'apikey': kPublicKey,
+            'apikey': kMarvelApiPublicToken,
             'hash': md5.convert(utf8.encode(hash)).toString(),
           });
 
