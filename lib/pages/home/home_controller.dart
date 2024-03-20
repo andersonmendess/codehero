@@ -18,20 +18,20 @@ class HomeController extends ChangeNotifier {
   Future<void> loadCharacters() async {
     setPageState(PageState.loading);
 
-    repository
-        .getCharacters(
-      limit: limit,
-      offset: (currentPage - 1) * limit,
-      nameStartsWith: nameStartsWith,
-    )
-        .then((value) {
-      setCharacters(value.results);
-      count = value.total;
+    try {
+      final result = await repository.getCharacters(
+        limit: limit,
+        offset: (currentPage - 1) * limit,
+        nameStartsWith: nameStartsWith,
+      );
+
+      setCharacters(result.results);
+      count = result.total;
 
       setPageState(PageState.idle);
-    }).catchError((err) {
+    } catch (e) {
       setPageState(PageState.error);
-    });
+    }
   }
 
   Future<void> refreshCharacters() async {
