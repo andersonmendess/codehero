@@ -1,3 +1,4 @@
+import 'package:code_hero/constants.dart';
 import 'package:code_hero/pages/home/home_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -17,7 +18,7 @@ class Header extends StatelessWidget {
             text: const TextSpan(
               text: 'BUSCA MARVEL ',
               style: TextStyle(
-                color: Color(0xFFD42026),
+                color: kPrimaryColor,
                 fontSize: 16,
                 fontWeight: FontWeight.w900,
               ),
@@ -35,7 +36,7 @@ class Header extends StatelessWidget {
             width: 54,
             height: 7,
             child: Divider(
-              color: Color(0xFFD42026),
+              color: kPrimaryColor,
               thickness: 2.2,
             ),
           ),
@@ -43,13 +44,13 @@ class Header extends StatelessWidget {
           const Text(
             "Nome do Personagem",
             style: TextStyle(
-              color: Color(0xFFD42026),
+              color: kPrimaryColor,
               fontSize: 16,
             ),
           ),
           TextFormField(
             style: const TextStyle(
-              color: Color(0xFFD42026),
+              color: kPrimaryColor,
               height: 0.8,
             ),
             controller: inputTecontroller,
@@ -64,20 +65,20 @@ class Header extends StatelessWidget {
                 },
                 icon: const Icon(
                   Icons.clear,
-                  color: Color(0xFFD42026),
+                  color: kPrimaryColor,
                 ),
               ),
               isDense: true,
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(8),
                 borderSide: const BorderSide(
-                  color: Color(0xFFD42026),
+                  color: kPrimaryColor,
                 ),
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(8),
                 borderSide: const BorderSide(
-                  color: Color(0xFFD42026),
+                  color: kPrimaryColor,
                 ),
               ),
             ),

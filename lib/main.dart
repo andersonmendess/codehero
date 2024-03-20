@@ -1,3 +1,4 @@
+import 'package:code_hero/constants.dart';
 import 'package:code_hero/pages/home/home_controller.dart';
 import 'package:code_hero/pages/home/home_page.dart';
 import 'package:flutter/material.dart';
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFFD42026)),
+        colorScheme: ColorScheme.fromSeed(seedColor: kPrimaryColor),
         useMaterial3: true,
         scaffoldBackgroundColor: Colors.white,
       ),

@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:code_hero/constants.dart';
 import 'package:code_hero/pages/home/home_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -27,7 +28,7 @@ class PaginationBar extends StatelessWidget {
           IconButton(
             icon: Icon(
               Icons.arrow_back_ios,
-              color: Colors.red.withOpacity(canPrev ? 1 : 0.3),
+              color: kPrimaryColor.withOpacity(canPrev ? 1 : 0.3),
             ),
             onPressed: () {
               if (canPrev) context.read<HomeController>().previousPage();
@@ -43,7 +44,7 @@ class PaginationBar extends StatelessWidget {
           IconButton(
             icon: Icon(
               Icons.arrow_forward_ios,
-              color: Colors.red.withOpacity(
+              color: kPrimaryColor.withOpacity(
                 canNext ? 1 : 0.3,
               ),
             ),
@@ -94,10 +95,10 @@ class PageButton extends StatelessWidget {
                 height: 40,
                 padding: const EdgeInsets.all(8),
                 decoration: BoxDecoration(
-                  color: index == 1 ? const Color(0xFFD42026) : Colors.white,
+                  color: index == 1 ? kPrimaryColor : Colors.white,
                   borderRadius: BorderRadius.circular(20),
                   border: Border.all(
-                    color: const Color(0xFFD42026),
+                    color: kPrimaryColor,
                   ),
                 ),
                 child: Center(
