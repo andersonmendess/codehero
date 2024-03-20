@@ -1,3 +1,4 @@
+import 'package:code_hero/constants.dart';
 import 'package:code_hero/enums/page_state_enum.dart';
 import 'package:code_hero/pages/details/details_page.dart';
 import 'package:code_hero/pages/home/components/header_component.dart';
@@ -63,7 +64,7 @@ class _HomePageState extends State<HomePage> {
                           height: 44,
                           width: double.infinity,
                           decoration: const BoxDecoration(
-                            color: Color(0xFFD42026),
+                            color: kPrimaryColor,
                           ),
                           child: const Center(
                             child: Text(
@@ -78,7 +79,7 @@ class _HomePageState extends State<HomePage> {
                         Expanded(
                           child: ListView.separated(
                             separatorBuilder: (context, index) => const Divider(
-                              color: Color(0xFFD42026),
+                              color: kPrimaryColor,
                               height: 4,
                             ),
                             padding: const EdgeInsets.all(16),
@@ -124,7 +125,7 @@ class _HomePageState extends State<HomePage> {
                                           child: Text(
                                             character.name,
                                             style: const TextStyle(
-                                              color: Color(0xFF4E4E4E),
+                                              color: kGreyTextColor,
                                               fontSize: 21,
                                             ),
                                           ),
@@ -145,7 +146,7 @@ class _HomePageState extends State<HomePage> {
                           height: 44,
                           width: double.infinity,
                           decoration: const BoxDecoration(
-                            color: Color(0xFFD42026),
+                            color: kPrimaryColor,
                           ),
                           child: const Center(
                             child: Text(
@@ -160,7 +161,7 @@ class _HomePageState extends State<HomePage> {
                         Expanded(
                           child: ListView.separated(
                             separatorBuilder: (context, index) => const Divider(
-                              color: Color(0xFFD42026),
+                              color: kPrimaryColor,
                               height: 4,
                             ),
                             padding: const EdgeInsets.all(16),
@@ -187,7 +188,7 @@ class _HomePageState extends State<HomePage> {
                                               .map((e) => e.name)
                                               .join(', '),
                                           style: const TextStyle(
-                                            color: Color(0xFF4E4E4E),
+                                            color: kGreyTextColor,
                                             fontSize: 21,
                                           ),
                                           maxLines: 3,
@@ -208,7 +209,7 @@ class _HomePageState extends State<HomePage> {
                           height: 44,
                           width: double.infinity,
                           decoration: const BoxDecoration(
-                            color: Color(0xFFD42026),
+                            color: kPrimaryColor,
                           ),
                           child: const Center(
                             child: Text(
@@ -223,7 +224,7 @@ class _HomePageState extends State<HomePage> {
                         Expanded(
                           child: ListView.separated(
                             separatorBuilder: (context, index) => const Divider(
-                              color: Color(0xFFD42026),
+                              color: kPrimaryColor,
                               height: 4,
                             ),
                             padding: const EdgeInsets.all(16),
@@ -250,7 +251,7 @@ class _HomePageState extends State<HomePage> {
                                               .map((e) => e.name)
                                               .join(', '),
                                           style: const TextStyle(
-                                            color: Color(0xFF4E4E4E),
+                                            color: kGreyTextColor,
                                             fontSize: 21,
                                           ),
                                           maxLines: 3,
@@ -272,7 +273,7 @@ class _HomePageState extends State<HomePage> {
             const PaginationBar(),
             Container(
               height: 15,
-              color: const Color(0xFFD42026),
+              color: kPrimaryColor,
             ),
           ],
         ),

@@ -2,6 +2,7 @@ import 'dart:ui';
 
 // THEME
 const kPrimaryColor = Color(0xFFD42026);
+const kGreyTextColor = Color(0xFF4E4E4E);
 
 // API
 const kMarvelApiBaseUrl = 'https://gateway.marvel.com/v1/public/';

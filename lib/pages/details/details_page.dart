@@ -2,7 +2,6 @@ import 'package:code_hero/constants.dart';
 import 'package:code_hero/models/character.dart';
 import 'package:code_hero/pages/details/components/item_tile_component.dart';
 import 'package:flutter/material.dart';
-import 'package:palette_generator/palette_generator.dart';
 
 class DetailsPage extends StatefulWidget {
   final CharacterModel character;

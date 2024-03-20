@@ -15,9 +15,6 @@ class HttpService {
         responseType: ResponseType.json,
         contentType: 'application/json',
         baseUrl: kMarvelApiBaseUrl,
-        headers: {
-          'Referer': 'localhost',
-        },
       ),
     );
 
